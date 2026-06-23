@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>NeuralEdge Optimizer | ARM Enterprise Console</title>
+<title>NeuralEdge Optimizer | Investor Console</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #050b18;
+    background: #050814;
     color: #e5e7eb;
 }
 
-/* TOP BAR */
+/* HEADER */
 .header {
     background: #0b1220;
-    padding: 18px 30px;
+    padding: 20px 28px;
     font-size: 18px;
     font-weight: bold;
     border-bottom: 1px solid #1f2937;
@@ -29,13 +29,12 @@ body {
     padding: 25px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
     background: #0b1220;
     border: 1px solid #1f2937;
     border-radius: 12px;
     padding: 18px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 /* METRICS */
@@ -48,10 +47,10 @@ body {
     border-radius: 8px;
 }
 
+/* BADGE */
 .badge {
-    display: inline-block;
+    background: #2563eb;
     padding: 4px 10px;
-    background: #1d4ed8;
     border-radius: 999px;
     font-size: 12px;
 }
@@ -65,7 +64,7 @@ button {
     color: black;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 button:hover {
@@ -78,7 +77,7 @@ button:hover {
     height: 12px;
     background: #1f2937;
     border-radius: 10px;
-    margin-top: 12px;
+    margin-top: 14px;
     overflow: hidden;
 }
 
@@ -89,9 +88,28 @@ button:hover {
     transition: width 2s;
 }
 
-/* FOOTER STATUS */
+/* GRAPH */
+.graph {
+    height: 120px;
+    background: #0f172a;
+    border-radius: 10px;
+    margin-top: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to top,#22c55e,#38bdf8);
+    transition: height 2s;
+}
+
+/* FOOTER */
 .footer {
-    padding: 15px 25px;
+    padding: 14px 25px;
     border-top: 1px solid #1f2937;
     font-size: 12px;
     color: #9ca3af;
@@ -102,96 +120,101 @@ button:hover {
 <body>
 
 <div class="header">
-🧠 NeuralEdge Optimizer — ARM Enterprise AI Acceleration Console
+🧠 NeuralEdge Optimizer — ARM AI Acceleration Platform (Investor Preview)
 </div>
 
 <div class="container">
 
-    <!-- LEFT PANEL -->
+    <!-- LEFT -->
     <div class="card">
-        <h3>Baseline Model</h3>
+        <h3>System Overview</h3>
 
         <div class="metric">
-            <span>Model Size</span>
-            <span>120 MB</span>
+            <span>Model Compression</span>
+            <span>68% Reduction</span>
         </div>
 
         <div class="metric">
-            <span>Latency</span>
-            <span>45 ms</span>
-        </div>
-
-        <div class="metric">
-            <span>Precision</span>
-            <span>FP32</span>
-        </div>
-
-        <div class="metric">
-            <span>Status</span>
-            <span class="badge">Unoptimized</span>
-        </div>
-    </div>
-
-    <!-- RIGHT PANEL -->
-    <div class="card">
-        <h3>ARM Optimization Engine</h3>
-
-        <div class="metric">
-            <span>Quantization</span>
-            <span>ON</span>
-        </div>
-
-        <div class="metric">
-            <span>Pruning</span>
-            <span>ON</span>
-        </div>
-
-        <div class="metric">
-            <span>Graph Optimization</span>
-            <span>ON</span>
-        </div>
-
-        <button onclick="run()">Run ARM Optimization</button>
-
-        <div class="bar">
-            <div id="fill" class="fill"></div>
-        </div>
-    </div>
-
-    <!-- RESULTS -->
-    <div class="card" id="result" style="grid-column: span 2; display:none;">
-        <h3>Optimized Output (ARM64 Runtime)</h3>
-
-        <div class="metric">
-            <span>Model Size</span>
-            <span>120 MB → 38 MB</span>
-        </div>
-
-        <div class="metric">
-            <span>Latency</span>
-            <span>45 ms → 18 ms</span>
-        </div>
-
-        <div class="metric">
-            <span>Performance Gain</span>
+            <span>Latency Improvement</span>
             <span>2.4x Faster</span>
         </div>
 
         <div class="metric">
-            <span>ARM Efficiency Mode</span>
-            <span class="badge">ACTIVE</span>
+            <span>Target Platform</span>
+            <span>ARM64 Edge</span>
+        </div>
+
+        <div class="metric">
+            <span>Deployment Mode</span>
+            <span class="badge">Production Simulation</span>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="card">
+        <h3>Optimization Engine</h3>
+
+        <div class="metric">
+            <span>Quantization</span>
+            <span>Enabled</span>
+        </div>
+
+        <div class="metric">
+            <span>Pruning</span>
+            <span>Enabled</span>
+        </div>
+
+        <div class="metric">
+            <span>Graph Optimization</span>
+            <span>Enabled</span>
+        </div>
+
+        <button onclick="run()">Run Optimization Cycle</button>
+
+        <div class="bar">
+            <div id="fill" class="fill"></div>
+        </div>
+
+        <div class="graph">
+            <div id="line" class="line"></div>
+        </div>
+    </div>
+
+    <!-- OUTPUT -->
+    <div class="card" id="result" style="grid-column: span 2; display:none;">
+        <h3>Execution Results</h3>
+
+        <div class="metric">
+            <span>Inference Cost Reduction</span>
+            <span>↓ 61%</span>
+        </div>
+
+        <div class="metric">
+            <span>Throughput Increase</span>
+            <span>↑ 2.4x</span>
+        </div>
+
+        <div class="metric">
+            <span>Edge Efficiency Score</span>
+            <span>92 / 100</span>
+        </div>
+
+        <div class="metric">
+            <span>ARM Optimization Status</span>
+            <span class="badge">STABLE</span>
         </div>
     </div>
 
 </div>
 
 <div class="footer">
-System Status: Stable | ARM Optimization Pipeline: Running Simulation | NeuralEdge v1.0
+Investor Simulation Mode | ARM Optimization Engine v1.0 | NeuralEdge Confidential Preview
 </div>
 
 <script>
 function run() {
     document.getElementById("fill").style.width = "100%";
+    document.getElementById("line").style.height = "100%";
 
     setTimeout(() => {
         document.getElementById("result").style.display = "block";
