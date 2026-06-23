@@ -26,22 +26,20 @@ Modern AI models are often resource-heavy and inefficient on edge and Arm-based 
 ---
 
 ## Optimization Goals
-This project targets improvements in:
-
-- ⚡ Inference speed (latency reduction / tokens per second increase)
-- 📦 Model size reduction (disk + memory footprint)
-- 🔋 Efficient resource usage on Arm devices
-- 🚀 Deployment performance on Arm64 systems
+- ⚡ Faster inference (lower latency / higher tokens per second)
+- 📦 Reduced model size
+- 🔋 Lower compute and memory usage
+- 🚀 Better performance on Arm64 systems
 - 🧪 Reproducible benchmarking results
 
 ---
 
 ## Tech Stack
 - Python 3.x
-- PyTorch / TensorFlow (depending on implementation)
-- NumPy / Pandas for analysis
-- Linux / Arm64 environment support
-- Optional: ONNX / TensorRT / CoreML depending on deployment
+- PyTorch / TensorFlow
+- NumPy / Pandas
+- Linux / Arm64 environment
+- Optional: ONNX / TensorRT
 
 ---
 
@@ -49,4 +47,5 @@ This project targets improvements in:
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/123AGustien/arm-ai-
+git clone https://github.com/123AGustien/arm-ai-optimization.git
+cd arm-ai-optimization
