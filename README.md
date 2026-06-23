@@ -5,7 +5,7 @@
 
 ## 🧠 Overview
 
-This project is built for the **Arm Create: AI Optimization Challenge**, focusing on improving **AI inference efficiency on Arm64 architectures** through structured optimization techniques.
+This project is built for the **Arm Create: AI Optimization Challenge**, focusing on improving AI inference efficiency on **Arm64 architectures** through structured optimization techniques.
 
 The system demonstrates how a baseline AI model can be transformed into a **faster, smaller, and more efficient inference pipeline** without significant loss in output quality.
 
@@ -24,7 +24,7 @@ Modern AI models are often:
 - Computationally expensive on Arm-based devices
 - Inefficient for real-time inference use cases
 
-This project addresses these limitations by implementing a **practical optimization pipeline** designed specifically for **Arm-friendly deployment environments**.
+This project addresses these limitations using a **practical optimization pipeline for Arm-friendly environments**.
 
 ---
 
@@ -34,22 +34,16 @@ This project addresses these limitations by implementing a **practical optimizat
 
 ```text
 🧠 INPUT MODEL
-      │
-      ▼
+      ↓
 📊 BASELINE BENCHMARKING
-      │
-      ▼
+      ↓
 ⚙️ OPTIMIZATION LAYER
    ├── Quantization
    ├── Pruning
    └── Performance Tuning
-      │
-      ▼
+      ↓
 🚀 OPTIMIZED MODEL
-      │
-      ▼
+      ↓
 📈 BENCHMARK ENGINE
-      │
-      ▼
-📊 COMPARATIVE ANALYSIS
-(Baseline vs Optimized)
+      ↓
+📊 COMPARATIVE ANALYSIS (Baseline vs Optimized)
