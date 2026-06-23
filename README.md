@@ -23,7 +23,13 @@ Modern AI models are often resource-heavy and inefficient on edge and Arm-based 
 - Arm64-compatible execution setup
 - Reproducible experiments
 
----
+
+<img width="1149" height="1369" alt="file_000000002d3072089e6728588947d881" src="https://github.com/user-attachments/assets/7941e427-fb97-4104-878a-a7294ecff7f8" />
+
+---<img width="1113" height="1414" alt="file_000000009ec472088ef396a1e2b828a1" src="https://github.com/user-attachments/assets/5de9bfa9-194c-4766-ba9f-c51aab748387" />
+
+
+
 
 ## Optimization Goals
 - ⚡ Faster inference (lower latency / higher tokens per second)
