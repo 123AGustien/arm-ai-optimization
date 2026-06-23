@@ -2,84 +2,197 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>NeuralEdge Optimizer Demo</title>
+<title>NeuralEdge Optimizer | ARM Enterprise Console</title>
+
 <style>
 body {
-    font-family: Arial;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #050b18;
+    color: #e5e7eb;
+}
+
+/* TOP BAR */
+.header {
     background: #0b1220;
-    color: white;
-    text-align: center;
-    padding: 40px;
+    padding: 18px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #1f2937;
 }
 
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 25px;
+}
+
+/* CARDS */
 .card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 20px auto;
-    width: 70%;
+    background: #0b1220;
+    border: 1px solid #1f2937;
     border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
+/* METRICS */
+.metric {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 8px;
+    background: #0f172a;
+    border-radius: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #1d4ed8;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+/* BUTTON */
 button {
-    padding: 12px 18px;
+    padding: 10px 16px;
+    background: #22c55e;
     border: none;
     border-radius: 8px;
-    background: #38bdf8;
+    color: black;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 10px;
 }
 
+button:hover {
+    background: #16a34a;
+}
+
+/* PROGRESS */
 .bar {
     width: 100%;
-    background: #334155;
+    height: 12px;
+    background: #1f2937;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 12px;
+    overflow: hidden;
 }
 
 .fill {
-    height: 18px;
+    height: 100%;
     width: 0%;
-    background: #22c55e;
-    border-radius: 10px;
+    background: linear-gradient(90deg,#22c55e,#38bdf8);
     transition: width 2s;
+}
+
+/* FOOTER STATUS */
+.footer {
+    padding: 15px 25px;
+    border-top: 1px solid #1f2937;
+    font-size: 12px;
+    color: #9ca3af;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🧠 NeuralEdge Optimizer</h1>
-<p>AI Model Optimization for Arm Systems</p>
-
-<div class="card">
-    <h2>Baseline Model</h2>
-    <p>Size: 120 MB</p>
-    <p>Latency: 45 ms</p>
+<div class="header">
+🧠 NeuralEdge Optimizer — ARM Enterprise AI Acceleration Console
 </div>
 
-<div class="card">
-    <h2>Optimization Engine</h2>
-    <p>Quantization: ON</p>
-    <p>Pruning: ON</p>
-    <p>Graph Optimization: ON</p>
+<div class="container">
 
-    <button onclick="run()">Run Optimization</button>
+    <!-- LEFT PANEL -->
+    <div class="card">
+        <h3>Baseline Model</h3>
 
-    <div class="bar">
-        <div id="fill" class="fill"></div>
+        <div class="metric">
+            <span>Model Size</span>
+            <span>120 MB</span>
+        </div>
+
+        <div class="metric">
+            <span>Latency</span>
+            <span>45 ms</span>
+        </div>
+
+        <div class="metric">
+            <span>Precision</span>
+            <span>FP32</span>
+        </div>
+
+        <div class="metric">
+            <span>Status</span>
+            <span class="badge">Unoptimized</span>
+        </div>
     </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="card">
+        <h3>ARM Optimization Engine</h3>
+
+        <div class="metric">
+            <span>Quantization</span>
+            <span>ON</span>
+        </div>
+
+        <div class="metric">
+            <span>Pruning</span>
+            <span>ON</span>
+        </div>
+
+        <div class="metric">
+            <span>Graph Optimization</span>
+            <span>ON</span>
+        </div>
+
+        <button onclick="run()">Run ARM Optimization</button>
+
+        <div class="bar">
+            <div id="fill" class="fill"></div>
+        </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="card" id="result" style="grid-column: span 2; display:none;">
+        <h3>Optimized Output (ARM64 Runtime)</h3>
+
+        <div class="metric">
+            <span>Model Size</span>
+            <span>120 MB → 38 MB</span>
+        </div>
+
+        <div class="metric">
+            <span>Latency</span>
+            <span>45 ms → 18 ms</span>
+        </div>
+
+        <div class="metric">
+            <span>Performance Gain</span>
+            <span>2.4x Faster</span>
+        </div>
+
+        <div class="metric">
+            <span>ARM Efficiency Mode</span>
+            <span class="badge">ACTIVE</span>
+        </div>
+    </div>
+
 </div>
 
-<div class="card" id="result" style="display:none;">
-    <h2>Optimized Results</h2>
-    <p>Size: 38 MB</p>
-    <p>Latency: 18 ms</p>
-    <p>🚀 Speed Improvement: 2.4x</p>
+<div class="footer">
+System Status: Stable | ARM Optimization Pipeline: Running Simulation | NeuralEdge v1.0
 </div>
 
 <script>
 function run() {
     document.getElementById("fill").style.width = "100%";
+
     setTimeout(() => {
         document.getElementById("result").style.display = "block";
     }, 1800);
