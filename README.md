@@ -20,6 +20,7 @@ Key focus areas:
 ## 🎯 Problem Statement
 
 Modern AI models are often:
+
 - Too large for edge deployment  
 - Computationally expensive on Arm-based devices  
 - Inefficient for real-time inference use cases  
