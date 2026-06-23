@@ -1,97 +1,62 @@
-# 🚀 Arm AI Optimization Project  
-### High-Efficiency AI Inference & Optimization on Arm64 Systems
 
----
+🚀 ARM AI Optimization Project
+📌 Overview
+This project demonstrates an AI model optimization pipeline for ARM-based edge devices, focusing on reducing latency, model size, and power consumption while maintaining accuracy.
+It applies key techniques used in real-world edge AI systems:
+Quantization
+Pruning
+Graph optimization
+ARM NEON acceleration
+The goal is to enable efficient AI inference on low-power devices such as mobile and IoT systems.
+🧠 System Architecture
+flowchart LR
+IN[Input Data / User Request] --> BM[Baseline Model<br/>Large Neural Network<br/>High Compute Cost]
 
-## 🧠 Overview
+BM --> OPT[Optimization Engine]
 
-This project is built for the **Arm Create: AI Optimization Challenge**, focusing on improving AI inference efficiency on **Arm64 architectures** through structured optimization techniques.
+OPT --> Q[Quantization<br/>FP32 → INT8]
+OPT --> P[Pruning<br/>Remove Redundant Weights]
+OPT --> L[Layer Fusion]
+OPT --> A[ARM NEON Acceleration]
 
-It demonstrates how a baseline AI model can be transformed into a **faster, smaller, and more efficient inference pipeline** without significant loss in output quality.
+Q --> OM[Optimized Model]
+P --> OM
+L --> OM
+A --> OM
 
-Key focus areas:
-- ⚡ Faster inference (latency reduction / throughput improvement)  
-- 📦 Model size compression (quantization / pruning)  
-- 🔋 Lower CPU and memory usage on Arm64 systems  
-- 🧪 Reproducible benchmarking across environments  
+OM --> OUT[Edge Deployment Output<br/>Low Latency + Energy Efficient]
+Mermaid
+⚙️ Optimization Pipeline
+Mermaid
+flowchart LR
+A[Dense AI Model] --> B[Quantization INT8]
+B --> C[Structured Pruning]
+C --> D[Graph / Layer Optimization]
+D --> E[ARM CPU Optimization (NEON SIMD)]
+E --> F[Edge AI Deployment]
+F --> G[Performance Gains: Faster | Smaller | Efficient]
+📊 Benchmark Comparison
+Mermaid
+flowchart LR
+B1[Baseline Model] --> B2[High Latency<br/>High Power Usage<br/>Large Model Size]
 
----
+O1[Optimized Model] --> O2[Low Latency<br/>Low Power Usage<br/>Smaller Model Size]
 
-## 🎯 Problem Statement
-
-Modern AI models are often:
-
-- Too large for edge deployment  
-- Computationally expensive on Arm-based devices  
-- Inefficient for real-time inference use cases  
-
-This project addresses these limitations using a **practical optimization pipeline designed for Arm-friendly environments**.
-
----
-
-## 🏗️ System Architecture
-
-📌 This section shows the full end-to-end AI optimization workflow.
-
-![System Architecture](./images/system_architecture.png)
-
----
-
-## ⚙️ Optimization Pipeline
-
-📌 This section breaks down how the model is transformed from baseline to optimized state.
-
-![Optimization Pipeline](./images/optimization_pipeline.png)
-
-### Pipeline Steps:
-- Baseline profiling (latency + memory measurement)
-- Quantization (precision reduction for speed)
-- Pruning (removal of redundant weights)
-- Execution tuning (runtime optimization for Arm64)
-
----
-
-## 📊 Benchmark Results
-
-📌 This is the most important section — shows measurable performance gains.
-
-![Benchmark Results](./images/benchmark_results.png)
-
-### Performance Comparison
-
-| Metric | Baseline Model | Optimized Model | Improvement |
-|--------|----------------|----------------|-------------|
-| Inference Latency | High | Lower | ⚡ Faster |
-| Model Size | Large | Reduced | 📦 Compression |
-| CPU Usage | High | Optimized | 🔋 Efficiency |
-| Throughput | Lower | Higher | 🚀 Boost |
-
----
-
-## 💡 Key Innovations
-
-- End-to-end AI optimization pipeline for Arm systems  
-- Practical model compression (not theoretical-only)  
-- Benchmark-driven engineering workflow  
-- Reproducible experiment structure  
-- Edge-first AI optimization design  
-
----
-
-## 🧰 Tech Stack
-
-- Python 3.x  
-- PyTorch / TensorFlow  
-- NumPy / Pandas  
-- Linux (Arm64 environment)  
-- ONNX (optional export)  
-- Performance profiling tools  
-
----
-
-## 🛠️ Setup & Reproducibility
-
-### Clone Repository
-```bash
-git clone https://github.com/123AGustien/arm-ai-optimization.git
-cd arm-ai-optimization
+B2 -. comparison .-> O2
+🎯 Key Benefits
+⚡ Faster inference on ARM devices
+📉 Reduced model size (memory efficient)
+🔋 Lower power consumption
+📱 Suitable for mobile & edge AI deployment
+🧠 Maintains accuracy after optimization
+🏗️ Technologies Conceptually Used
+AI Model Compression Techniques
+Quantization (INT8 conversion)
+Neural Network Pruning
+ARM NEON SIMD Optimization
+Edge AI Deployment Strategy
+📈 Project Goal
+To demonstrate how large AI models can be transformed into lightweight edge-optimized systems without significant loss in performance.
+🧾 Summary
+This project shows a full pipeline from:
+Heavy AI Model → Optimization Engine → Efficient Edge Deployment
