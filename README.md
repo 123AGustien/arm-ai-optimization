@@ -47,3 +47,65 @@ This project addresses these limitations using a **practical optimization pipeli
 📈 BENCHMARK ENGINE
       ↓
 📊 COMPARATIVE ANALYSIS (Baseline vs Optimized)
+
+## ⚙️ Optimization Pipeline
+
+This project implements a modular optimization workflow:
+
+### 1. Baseline Profiling
+- Measure initial latency  
+- Record memory usage  
+- Establish performance baseline  
+
+### 2. Model Optimization Techniques
+- Quantization → reduces precision for faster inference  
+- Pruning → removes redundant weights  
+- Execution tuning → improves runtime efficiency  
+
+### 3. Deployment Target
+- Arm64-compatible systems  
+- Edge-style inference environments  
+- CPU-optimized execution path  
+
+---
+
+## 📊 Benchmark Results
+
+### Performance Comparison
+
+| Metric | Baseline Model | Optimized Model | Improvement |
+|--------|----------------|----------------|-------------|
+| Inference Latency | High | Lower | ⚡ Faster |
+| Model Size | Large | Reduced | 📦 Compression |
+| CPU Usage | High | Optimized | 🔋 Efficiency |
+| Throughput | Lower | Higher | 🚀 Boost |
+
+---
+
+## 💡 Key Innovations
+
+- End-to-end AI optimization pipeline for Arm systems  
+- Practical model compression (not theoretical-only)  
+- Benchmark-driven engineering workflow  
+- Reproducible experiment structure  
+- Edge-first AI optimization design  
+
+---
+
+## 🧰 Tech Stack
+
+- Python 3.x  
+- PyTorch / TensorFlow  
+- NumPy / Pandas  
+- Linux (Arm64 environment)  
+- ONNX (optional export)  
+- Performance profiling tools  
+
+---
+
+## 🛠️ Setup & Reproducibility
+
+### Clone Repository
+```bash
+git clone https://github.com/123AGustien/arm-ai-optimization.git
+cd arm-ai-optimization
