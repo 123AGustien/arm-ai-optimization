@@ -1,45 +1,55 @@
-# Arm AI Optimization Project
+# 🚀 Arm AI Optimization Project  
+### High-Efficiency AI Inference on Arm64 Systems
 
-## 🚀 Overview
+---
 
-This project is built for the **Arm Create: AI Optimization Challenge**.  
-It focuses on improving AI model efficiency and inference performance on **Arm-powered (Arm64) systems**.
+## 🧠 Overview
 
-The goal is to demonstrate measurable improvements in:
+This project is built for the **Arm Create: AI Optimization Challenge**, focusing on improving **AI inference efficiency on Arm64 architectures** through structured optimization techniques.
 
-- ⚡ Model inference speed (latency / tokens per second)
-- 📦 Model size reduction (quantization / pruning / compression)
-- 🔋 Resource efficiency on Arm64 architectures
+The system demonstrates how a baseline AI model can be transformed into a **faster, smaller, and more efficient inference pipeline** without significant loss in output quality.
+
+Key focus areas:
+- ⚡ Faster inference (latency reduction / throughput improvement)
+- 📦 Model size compression (quantization / pruning)
+- 🔋 Lower CPU and memory usage on Arm64 systems
 - 🧪 Reproducible benchmarking across environments
 
 ---
 
-## 🧠 Problem Statement
+## 🎯 Problem Statement
 
-Modern AI models are often resource-heavy and inefficient on edge and Arm-based systems.
+Modern AI models are often:
+- Too large for edge deployment
+- Computationally expensive on Arm-based devices
+- Inefficient for real-time inference use cases
 
-This project explores practical optimization techniques to make AI models:
-- Faster
-- Smaller
-- More efficient  
-without significant loss in output quality.
+This project addresses these limitations by implementing a **practical optimization pipeline** designed specifically for **Arm-friendly deployment environments**.
 
 ---
 
 ## 🏗️ System Architecture
 
-The optimization pipeline is structured as follows:
+### 🔄 End-to-End Optimization Flow
 
 ```text
-INPUT MODEL
-    ↓
-BASELINE EVALUATION
-    ↓
-OPTIMIZATION LAYER
-(Quantization / Pruning / Tuning)
-    ↓
-OPTIMIZED MODEL
-    ↓
-BENCHMARKING ENGINE
-    ↓
-RESULT ANALYSIS (Before vs After)
+🧠 INPUT MODEL
+      │
+      ▼
+📊 BASELINE BENCHMARKING
+      │
+      ▼
+⚙️ OPTIMIZATION LAYER
+   ├── Quantization
+   ├── Pruning
+   └── Performance Tuning
+      │
+      ▼
+🚀 OPTIMIZED MODEL
+      │
+      ▼
+📈 BENCHMARK ENGINE
+      │
+      ▼
+📊 COMPARATIVE ANALYSIS
+(Baseline vs Optimized)
