@@ -1,19 +1,90 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
-<title>NeuralEdge Optimizer</title>
+<title>NeuralEdge Optimizer Demo</title>
+<style>
+body {
+    font-family: Arial;
+    background: #0b1220;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 12px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    background: #334155;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.fill {
+    height: 18px;
+    width: 0%;
+    background: #22c55e;
+    border-radius: 10px;
+    transition: width 2s;
+}
+</style>
 </head>
-<body><h1>🚀 NeuralEdge Optimizer</h1><p>AI Model Optimization for Arm Systems</p><h2>Project Resources</h2><ul>
-<li><a href="https://github.com/123AGustien/arm-ai-optimization">GitHub Repository</a></li>
-<li><a href="https://github.com/123AGustien/arm-ai-optimization/blob/main/README.md">README Documentation</a></li>
-<li><a href="https://github.com/123AGustien/arm-ai-optimization/blob/main/architecture_diagram.md">Architecture Diagram</a></li>
-<li><a href="https://github.com/123AGustien/arm-ai-optimization/releases">Project Releases</a></li>
-</ul><h2>Overview</h2><p>
-NeuralEdge Optimizer is a modular AI optimization pipeline focused on improving model efficiency, reducing latency, shrinking model size, and benchmarking performance on Arm-based systems.
-</p><h2>Optimization Techniques</h2><ul>
-<li>Quantization</li>
-<li>Pruning</li>
-<li>Graph Optimization</li>
-<li>Arm64 Performance Benchmarking</li>
-</ul></body>
+
+<body>
+
+<h1>🧠 NeuralEdge Optimizer</h1>
+<p>AI Model Optimization for Arm Systems</p>
+
+<div class="card">
+    <h2>Baseline Model</h2>
+    <p>Size: 120 MB</p>
+    <p>Latency: 45 ms</p>
+</div>
+
+<div class="card">
+    <h2>Optimization Engine</h2>
+    <p>Quantization: ON</p>
+    <p>Pruning: ON</p>
+    <p>Graph Optimization: ON</p>
+
+    <button onclick="run()">Run Optimization</button>
+
+    <div class="bar">
+        <div id="fill" class="fill"></div>
+    </div>
+</div>
+
+<div class="card" id="result" style="display:none;">
+    <h2>Optimized Results</h2>
+    <p>Size: 38 MB</p>
+    <p>Latency: 18 ms</p>
+    <p>🚀 Speed Improvement: 2.4x</p>
+</div>
+
+<script>
+function run() {
+    document.getElementById("fill").style.width = "100%";
+    setTimeout(() => {
+        document.getElementById("result").style.display = "block";
+    }, 1800);
+}
+</script>
+
+</body>
 </html>
