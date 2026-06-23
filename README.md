@@ -18,8 +18,7 @@ Techniques:
 ---
 
 ## 🧠 System Architecture
-
-```mermaid id="q1v8ka"
+```mermaid
 flowchart LR
 IN[Input Data] --> BM[Baseline Model]
 
@@ -36,3 +35,4 @@ L --> OM
 A --> OM
 
 OM --> OUT[Edge Deployment Output]
+```
